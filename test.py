@@ -1,38 +1,82 @@
+from Question import Question as Q
 
-# クエスチョンメソッド
+
+
+
+"""
+
+人は、状態を持っている
+
+メイン
+    質問をする
+
+
+
+
+アンサー
+クエスチョン
+
+・ステートは各種ブーリアンを持つ
+
+
+アンサー
+・入力がyかnならT、それ以外ならF
+
+
+・質問文は
+  input()で、質問文を表示させる
+  アンサーで、正規化する
+  アンサー結果をブーリアンに変換する
+
+
+
+"""
+
 
 print("すべての質問にyまたはnで答えて下さい")
 
+#オブジェクト
+class Answer:
 
-#
-class Question:
-    #パッシブな状態
-    hasMoney = ""
-    #現在の状態
-    isHungry = ""
-    isDrink = ""
-    isSnack = ""
-    
-
-
-    if  hasMoney== "y":
-        isHungry = input("お腹がすごく空いてますか？ >>")
-        isDrink = input("ビールを飲みたいですか？ >>")
-
-        if isHungry == "y" and isDrink == "y":
-            print("焼肉はいかがですか")
-        elif isHungry == "y":
-            print("カレーはいかがですか")
-        elif isDrink == "y":
-            print("焼き鳥はいかがですか")
+    def ans2(str):
+        canAnswer = ans(str)
+        if canAnser:
+            return True
         else:
-            print("パスタはいかがですか")
+            print("入力が間違っています")
+            return False
 
-        isSnack = input("夜食は必要ですか？ >>")
-        if isSnack == "y":
-            print("コンビニのチキンはいかがですか")
 
-    else:
-        print("家で食べましょう")
+
+    def ans(str):
+        if str=="y":
+            return True
+        elif str=="n":
+            return True
+        else:
+            return False
+
+#値
+questionText=""
+
+
+# アンサー関数
+Answer.ans(input(f"{questionText}"))
+
+# クエスチョン関数
+q = Q()
+q.check()
+
+
+
+def boolTrigger():
+    
+    def __init__(self):
+        # インスタンス変数にデフォルト値を与える
+        self.hasMoney = ""
+        self.isHungry = ""
+        self.isDrink = ""
+        self.isSnack = ""
+
 
 
